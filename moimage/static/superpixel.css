@@ -1,0 +1,54 @@
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+#baseImage {
+    display: block;
+}
+
+#maskCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#interactionCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+}
+
+.controls {
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.color-btn {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.color-btn.active {
+    border-color: #000;
+    transform: scale(1.1);
+}
+
+.action-btn {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    background: #e0e0e0;
+}
