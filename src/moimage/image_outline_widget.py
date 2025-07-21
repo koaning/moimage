@@ -84,6 +84,11 @@ class ImageOutlineWidget(ImageWidget):
         
         return None
 
+    @property
+    def image(self) -> str:
+        """Standardized output image property for widget chaining."""
+        return self.processed_image_src if self.processed_image_src else self.src
+
     def get_outline_info(self) -> dict:
         """
         Get information about the current outline settings.

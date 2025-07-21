@@ -43,10 +43,15 @@ class ImageClipboardWidget(anywidget.AnyWidget):
         """Set the image source for clipboard operations."""
         self.image_src = image_src
     
+    @property
+    def image(self) -> str:
+        """Standardized output image property for widget chaining."""
+        return self.image_src
+
     def get_clipboard_info(self) -> dict:
         """
         Get information about the clipboard configuration.
-        
+
         Returns:
             Dictionary with clipboard parameters and status
         """

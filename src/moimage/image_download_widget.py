@@ -54,10 +54,15 @@ class ImageDownloadWidget(anywidget.AnyWidget):
         """Set the image format for download."""
         self.format = format
     
+    @property
+    def image(self) -> str:
+        """Standardized output image property for widget chaining."""
+        return self.image_src
+
     def get_download_info(self) -> dict:
         """
         Get information about the download configuration.
-        
+
         Returns:
             Dictionary with download parameters and status
         """

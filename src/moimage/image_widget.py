@@ -137,10 +137,15 @@ class ImageWidget(anywidget.AnyWidget):
         except Exception as e:
             raise ValueError(f"Failed to load PIL image: {e}")
     
+    @property
+    def image(self) -> str:
+        """Standardized output image property for widget chaining."""
+        return self.src
+    
     def get_image_info(self) -> dict:
         """
         Get information about the currently loaded image.
-        
+
         Returns:
             Dictionary with image metadata
         """
